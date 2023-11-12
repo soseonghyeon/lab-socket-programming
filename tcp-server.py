@@ -17,6 +17,6 @@ while 1:
     data = conn.recv(BUFFER_SIZE)
     currnetTime = " " + " updated !!! " + time.ctime(time.time()) + "\r\n"
     print(data.decode('utf-8'))
-    data = data + currnetTime.encode('askii')
+    data = data + currnetTime.encode('ascii')
     conn.send(data)
     conn.close()
